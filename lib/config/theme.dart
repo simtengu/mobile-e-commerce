@@ -10,10 +10,21 @@ ThemeData theme() {
         backgroundColor: Colors.transparent,
         elevation: 0,
         surfaceTintColor: Colors.transparent),
+    textButtonTheme: TextButtonThemeData(
+      style: TextButton.styleFrom(foregroundColor: Pallete.secondary),
+    ),
+    elevatedButtonTheme: ElevatedButtonThemeData(
+        style: ElevatedButton.styleFrom(
+      foregroundColor: Colors.white,
+      backgroundColor: Pallete.primaryDark,
+      minimumSize: const Size(double.infinity, 50),
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+    )),
     inputDecorationTheme: InputDecorationTheme(
-        filled: false,
-        border: InputBorder.none,
-        outlineBorder: BorderSide(color: Pallete.textPrimary)),
+      contentPadding: const EdgeInsets.symmetric(horizontal: 10, vertical: 14),
+      border: OutlineInputBorder(
+          borderSide: BorderSide(color: Pallete.textPrimary)),
+    ),
   );
 }
 

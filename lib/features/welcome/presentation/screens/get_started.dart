@@ -1,6 +1,7 @@
 import 'package:e_commerce_app/config/theme.dart';
 import 'package:e_commerce_app/core/utils/commonWidgets/texts.dart';
 import 'package:e_commerce_app/core/utils/commonWidgets/vertical_spacing.dart';
+import 'package:e_commerce_app/features/auth/presentation/screens/signin.dart';
 import 'package:e_commerce_app/features/welcome/presentation/widgets/get_started_one.dart';
 import 'package:e_commerce_app/features/welcome/presentation/widgets/get_started_three.dart';
 import 'package:e_commerce_app/features/welcome/presentation/widgets/get_started_two.dart';
@@ -51,16 +52,26 @@ class _GetStartedOneScreenState extends State<GetStartedScreen> {
               ),
             ),
             SmoothPageIndicator(
-              controller: _pageController, // Connect indicator with PageView
-              count: 3, // Number of pages
-              effect:
-                  const WormEffect(), // Choose the indicator effect you want
+              controller: _pageController,
+              count: 3,
+              onDotClicked: (int index) => setState(() {
+                _pageController.animateToPage(
+                  index,
+                  duration:
+                      const Duration(milliseconds: 500), // Animation duration.
+                  curve: Curves.easeInOut,
+                );
+              }),
+              effect: WormEffect(activeDotColor: Pallete.secondary),
             ),
             const Spacer(
               flex: 2,
             ),
             ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => const SignInScreen()));
+                },
                 style: ElevatedButton.styleFrom(
                   foregroundColor: Colors.white,
                   backgroundColor: Pallete.primaryDark,
