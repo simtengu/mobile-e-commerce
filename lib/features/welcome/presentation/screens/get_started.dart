@@ -1,7 +1,7 @@
 import 'package:e_commerce_app/config/theme.dart';
 import 'package:e_commerce_app/core/utils/commonWidgets/texts.dart';
 import 'package:e_commerce_app/core/utils/commonWidgets/vertical_spacing.dart';
-import 'package:e_commerce_app/features/auth/presentation/screens/signin.dart';
+import 'package:e_commerce_app/features/auth/presentation/screens/signup.dart';
 import 'package:e_commerce_app/features/welcome/presentation/widgets/get_started_one.dart';
 import 'package:e_commerce_app/features/welcome/presentation/widgets/get_started_three.dart';
 import 'package:e_commerce_app/features/welcome/presentation/widgets/get_started_two.dart';
@@ -16,8 +16,7 @@ class GetStartedScreen extends StatefulWidget {
 }
 
 class _GetStartedOneScreenState extends State<GetStartedScreen> {
-  PageController _pageController = PageController();
-  int _currentPage = 0;
+  final PageController _pageController = PageController();
 
   @override
   void dispose() {
@@ -70,7 +69,7 @@ class _GetStartedOneScreenState extends State<GetStartedScreen> {
             ElevatedButton(
                 onPressed: () {
                   Navigator.of(context).push(MaterialPageRoute(
-                      builder: (context) => const SignInScreen()));
+                      builder: (context) => const SignUpScreen()));
                 },
                 style: ElevatedButton.styleFrom(
                   foregroundColor: Colors.white,

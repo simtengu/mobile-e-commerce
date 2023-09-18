@@ -78,7 +78,7 @@ class SignInScreen extends StatelessWidget {
                             borderRadius: BorderRadius.circular(25))),
                     child: const Text('Login'),
                   ),
-                  vSpacing(20),
+                  vSpacing(26),
                   Center(
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -108,7 +108,7 @@ class SignInScreen extends StatelessWidget {
                       ],
                     ),
                   ),
-                  vSpacing(20),
+                  vSpacing(26),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[

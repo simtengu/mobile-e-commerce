@@ -24,7 +24,7 @@ class LoginWithFbButton extends StatelessWidget {
           hSpacing(12),
           Image.asset(
             '${AppConstants.iconPath}facebook.png',
-            width: 24,
+            width: 26,
             fit: BoxFit.cover,
           )
         ],

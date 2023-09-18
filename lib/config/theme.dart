@@ -21,7 +21,8 @@ ThemeData theme() {
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
     )),
     inputDecorationTheme: InputDecorationTheme(
-      contentPadding: const EdgeInsets.symmetric(horizontal: 10, vertical: 14),
+      
+      contentPadding: const EdgeInsets.symmetric(horizontal: 10, vertical: 11),
       border: OutlineInputBorder(
           borderSide: BorderSide(color: Pallete.textPrimary)),
     ),
