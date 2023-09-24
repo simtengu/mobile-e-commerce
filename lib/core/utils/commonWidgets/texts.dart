@@ -43,7 +43,7 @@ Widget body1(String txt, {TextStyle? customStyle, bool isCentered = false}) {
       customStyle != null ? defaultStyle.merge(customStyle) : defaultStyle;
   return Text(
     txt,
-    textAlign: isCentered ? TextAlign.center: TextAlign.start,
+    textAlign: isCentered ? TextAlign.center : TextAlign.start,
     style: mergedStyle,
   );
 }
@@ -57,7 +57,7 @@ Widget body2(String txt, {TextStyle? customStyle, bool isCentered = false}) {
       customStyle != null ? defaultStyle.merge(customStyle) : defaultStyle;
   return Text(
     txt,
-     textAlign: isCentered ? TextAlign.center: TextAlign.start,
+    textAlign: isCentered ? TextAlign.center : TextAlign.start,
     style: mergedStyle,
   );
 }
@@ -65,7 +65,7 @@ Widget body2(String txt, {TextStyle? customStyle, bool isCentered = false}) {
 Widget caption(String txt, {TextStyle? customStyle}) {
   final TextStyle defaultStyle = TextStyle(
     color: Pallete.textPrimary,
-    fontSize: 12,
+    fontSize: 14,
   );
   final TextStyle mergedStyle =
       customStyle != null ? defaultStyle.merge(customStyle) : defaultStyle;

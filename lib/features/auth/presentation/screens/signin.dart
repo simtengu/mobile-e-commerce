@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:e_commerce_app/config/theme.dart';
 import 'package:e_commerce_app/core/utils/commonWidgets/horizontal_spacing.dart';
 import 'package:e_commerce_app/core/utils/commonWidgets/texts.dart';
@@ -5,7 +6,7 @@ import 'package:e_commerce_app/core/utils/commonWidgets/vertical_spacing.dart';
 import 'package:e_commerce_app/core/utils/constants.dart';
 import 'package:e_commerce_app/features/auth/presentation/widgets/login_with_fb.dart';
 import 'package:e_commerce_app/features/auth/presentation/widgets/login_with_google.dart';
-import 'package:flutter/material.dart';
+import 'package:e_commerce_app/features/auth/presentation/screens/signup.dart';
 
 class SignInScreen extends StatelessWidget {
   const SignInScreen({super.key});
@@ -57,11 +58,14 @@ class SignInScreen extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: <Widget>[
                       TextButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.of(context).push(MaterialPageRoute(builder:(context)=>const SignUpScreen()));
+                        },
                         child: const Text(
                           "I don't have an account",
                         ),
                       ),
+                      
                       TextButton(
                         onPressed: () {},
                         child: const Text(

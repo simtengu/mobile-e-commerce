@@ -3,6 +3,7 @@ import 'package:e_commerce_app/core/utils/commonWidgets/horizontal_spacing.dart'
 import 'package:e_commerce_app/core/utils/commonWidgets/texts.dart';
 import 'package:e_commerce_app/core/utils/commonWidgets/vertical_spacing.dart';
 import 'package:e_commerce_app/core/utils/constants.dart';
+import 'package:e_commerce_app/features/home/homepage.dart';
 import 'package:flutter/material.dart';
 
 class SignUpScreen extends StatefulWidget {
@@ -16,12 +17,14 @@ class _SignUpScreenState extends State<SignUpScreen> {
   bool isWoman = true;
   @override
   Widget build(BuildContext context) {
-    final _size = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
         actions: [
           TextButton.icon(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.of(context).push(
+                    MaterialPageRoute(builder: (context) => const HomePage()));
+              },
               style: TextButton.styleFrom(
                   backgroundColor: Pallete.secondaryLight.withOpacity(.5),
                   shape: RoundedRectangleBorder(
