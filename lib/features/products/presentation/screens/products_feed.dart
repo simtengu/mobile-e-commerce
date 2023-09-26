@@ -3,12 +3,14 @@ import 'package:e_commerce_app/core/utils/commonWidgets/horizontal_spacing.dart'
 import 'package:e_commerce_app/core/utils/commonWidgets/texts.dart';
 import 'package:e_commerce_app/core/utils/commonWidgets/vertical_spacing.dart';
 import 'package:e_commerce_app/core/utils/constants.dart';
+import 'package:e_commerce_app/features/products/presentation/screens/product_search.dart';
 import 'package:e_commerce_app/features/products/presentation/widgets/product_card.dart';
 import 'package:e_commerce_app/features/products/presentation/widgets/top_brands.dart';
 import 'package:e_commerce_app/features/products/presentation/widgets/top_categories.dart';
 import 'package:flutter/material.dart';
 
 class ProductsFeedScreen extends StatefulWidget {
+  
   const ProductsFeedScreen({Key? key}) : super(key: key);
 
   @override
@@ -120,22 +122,22 @@ class SearchInput extends StatelessWidget {
       child: Row(
         children: [
           Expanded(
-            child: Container(
-              padding: const EdgeInsets.all(1),
-              decoration: BoxDecoration(
-                color: Pallete.primaryLight,
-                borderRadius: BorderRadius.circular(10),
+            child: GestureDetector(
+              onTap: () => Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (context) => const ProductSearchScreen(),
+                ),
               ),
-              child: TextField(
-                onChanged: (value) {
-                  //Do something wi
-                },
-                decoration: InputDecoration(
-                  prefixIcon: const Icon(Icons.search),
-                  prefixIconColor: Pallete.secondary,
-                  hintText: 'Search',
-                  hintStyle: TextStyle(color: Pallete.secondary),
-                  border: InputBorder.none,
+              child: Container(
+                padding: const EdgeInsets.all(1),
+                decoration: BoxDecoration(
+                  color: Pallete.primaryLight,
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: Container(
+                  padding: const EdgeInsets.all(10),
+                  child: body1('Search....',
+                      customStyle: TextStyle(color: Pallete.secondary)),
                 ),
               ),
             ),

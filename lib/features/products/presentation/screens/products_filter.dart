@@ -15,21 +15,22 @@ class ProductsFilterScreen extends StatefulWidget {
 
 class _ProductsFilterScreenState extends State<ProductsFilterScreen> {
   bool isGridView = true;
+
   final List<Map<String, String>> productList = [
     {
-      'title': 'gucci',
+      'title': 'adidas',
       'price': '33',
-      'imgUrl': 'gucci.png',
+      'imgUrl': 'adidas.png',
     },
     {
-      'title': 'gucci',
+      'title': 'sandals',
       'price': '33',
-      'imgUrl': 'gucci.png',
+      'imgUrl': 'sandals.png',
     },
     {
-      'title': 'gucci',
+      'title': 'highheel',
       'price': '33',
-      'imgUrl': 'gucci.png',
+      'imgUrl': 'highheel.png',
     },
     {
       'title': 'gucci',
@@ -42,6 +43,11 @@ class _ProductsFilterScreenState extends State<ProductsFilterScreen> {
       'imgUrl': 'nike.png',
     },
     {
+      'title': 'yeezy',
+      'price': '33',
+      'imgUrl': 'yeezy.png',
+    },
+    {
       'title': 'puma',
       'price': '33',
       'imgUrl': 'puma.png',
@@ -52,14 +58,9 @@ class _ProductsFilterScreenState extends State<ProductsFilterScreen> {
       'imgUrl': 'gucci.png',
     },
     {
-      'title': 'gucci',
+      'title': 'nike',
       'price': '33',
-      'imgUrl': 'gucci.png',
-    },
-    {
-      'title': 'gucci',
-      'price': '33',
-      'imgUrl': 'gucci.png',
+      'imgUrl': 'nike.png',
     },
   ];
 
@@ -68,8 +69,7 @@ class _ProductsFilterScreenState extends State<ProductsFilterScreen> {
       isScrollControlled: true,
       context: context,
       builder: (BuildContext context) {
-        return
-         const ProductsFilterModal();
+        return const ProductsFilterModal();
       },
     );
   }
@@ -82,7 +82,8 @@ class _ProductsFilterScreenState extends State<ProductsFilterScreen> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           body1('23 items found',
-              customStyle: TextStyle(color: Pallete.primary)),
+              customStyle: TextStyle(
+                  color: Pallete.secondary, fontWeight: FontWeight.w500)),
           vSpacing(10),
           Row(
             mainAxisAlignment: MainAxisAlignment.start,
@@ -101,7 +102,7 @@ class _ProductsFilterScreenState extends State<ProductsFilterScreen> {
                       body1(
                         'New First',
                         customStyle:
-                            TextStyle(color: Pallete.secondary, fontSize: 20),
+                            TextStyle(color: Pallete.primaryDark, fontSize: 20),
                       ),
                       Icon(
                         Icons.unfold_more,
@@ -172,7 +173,7 @@ class _ProductsFilterScreenState extends State<ProductsFilterScreen> {
                       hSpacing(2),
                       body1(
                         'Filter',
-                        customStyle: TextStyle(color: Pallete.secondary),
+                        customStyle: TextStyle(color: Pallete.primaryDark),
                       ),
                     ],
                   ),
@@ -212,4 +213,3 @@ class _ProductsFilterScreenState extends State<ProductsFilterScreen> {
     );
   }
 }
-

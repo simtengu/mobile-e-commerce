@@ -63,41 +63,51 @@ class _CartItemState extends State<CartItem> {
                     children: [
                       body1('nike',
                           customStyle: TextStyle(color: Pallete.secondary)),
-                      body1('\$500',
+                      body2('Price: \$500',
                           customStyle: TextStyle(color: Pallete.secondary)),
                     ],
                   )),
-                  Row(
-                    mainAxisSize: MainAxisSize.min,
+                  Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      Container(
-                        padding: const EdgeInsets.all(4),
-                        decoration: BoxDecoration(
-                            shape: BoxShape.circle,
-                            color: Pallete.primary.withOpacity(0.3)),
-                        child: const Icon(
-                          Icons.remove,
-                          size: 13,
-                        ),
+                      Row(
+                        mainAxisSize: MainAxisSize.min,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Container(
+                            padding: const EdgeInsets.all(4),
+                            decoration: BoxDecoration(
+                                shape: BoxShape.circle,
+                                color: Pallete.primary.withOpacity(0.3)),
+                            child: const Icon(
+                              Icons.remove,
+                              size: 13,
+                            ),
+                          ),
+                          hSpacing(10),
+                          body1(
+                            '1',
+                            customStyle: TextStyle(
+                              color: Pallete.secondary,
+                            ),
+                          ),
+                          hSpacing(10),
+                          Container(
+                            padding: const EdgeInsets.all(4),
+                            decoration: BoxDecoration(
+                                shape: BoxShape.circle,
+                                color: Pallete.primary.withOpacity(0.3)),
+                            child: const Icon(
+                              Icons.add,
+                              size: 13,
+                            ),
+                          ),
+                        ],
                       ),
-                      hSpacing(10),
-                      body1(
-                        '1',
-                        customStyle: TextStyle(
-                          color: Pallete.secondary,
-                        ),
-                      ),
-                      hSpacing(10),
-                      Container(
-                        padding: const EdgeInsets.all(4),
-                        decoration: BoxDecoration(
-                            shape: BoxShape.circle,
-                            color: Pallete.primary.withOpacity(0.3)),
-                        child: const Icon(
-                          Icons.add,
-                          size: 13,
-                        ),
+                      vSpacing(4),
+                      body2(
+                        'Total: \$500',
+                        customStyle: TextStyle(color: Pallete.secondary),
                       ),
                     ],
                   ),

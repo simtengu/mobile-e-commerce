@@ -40,7 +40,7 @@ class SignInScreen extends StatelessWidget {
                   TextField(
                     decoration: InputDecoration(
                       border: OutlineInputBorder(
-                          borderSide: BorderSide(color: Pallete.textPrimary)),
+                          borderSide: BorderSide(color: Pallete.textPrimary),),
                       hintText: 'Email',
                       icon: const Icon(Icons.email),
                     ),

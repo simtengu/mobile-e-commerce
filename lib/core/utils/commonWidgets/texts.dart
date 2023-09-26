@@ -34,6 +34,17 @@ Widget heading3(String txt, {TextStyle? customStyle}) {
   );
 }
 
+Widget heading4(String txt, {TextStyle? customStyle}) {
+  final TextStyle defaultStyle = TextStyle(
+      color: Pallete.primary, fontSize: 19, fontWeight: FontWeight.w600);
+  final TextStyle mergedStyle =
+      customStyle != null ? defaultStyle.merge(customStyle) : defaultStyle;
+  return Text(
+    txt,
+    style: mergedStyle,
+  );
+}
+
 Widget body1(String txt, {TextStyle? customStyle, bool isCentered = false}) {
   final TextStyle defaultStyle = TextStyle(
     color: Pallete.textPrimary,
