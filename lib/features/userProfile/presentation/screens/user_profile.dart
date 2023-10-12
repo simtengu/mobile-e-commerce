@@ -2,6 +2,8 @@ import 'package:e_commerce_app/config/theme.dart';
 import 'package:e_commerce_app/core/utils/commonWidgets/texts.dart';
 import 'package:e_commerce_app/core/utils/commonWidgets/vertical_spacing.dart';
 import 'package:e_commerce_app/core/utils/constants.dart';
+import 'package:e_commerce_app/features/adminOperations/presentation/screens/products_management.dart';
+import 'package:e_commerce_app/features/userProfile/presentation/screens/change_password.dart';
 import 'package:e_commerce_app/features/userProfile/presentation/screens/edit_details.dart';
 import 'package:flutter/material.dart';
 
@@ -140,13 +142,21 @@ class UserProfileScreen extends StatelessWidget {
                   child: Column(
                     children: [
                       ListTile(
+                        onTap: () => Navigator.of(context).push(
+                          MaterialPageRoute(
+                              builder: (context) =>
+                                  const ProductsManagementScreen()),
+                        ),
                         contentPadding: const EdgeInsets.symmetric(
                                 horizontal: 0, vertical: 0)
                             .copyWith(left: 14),
                         iconColor: Pallete.primary,
-                        leading: const Icon(Icons.favorite_outline),
+                        leading: const Icon(
+                          Icons.edit_note,
+                          size: 29,
+                        ),
                         title: body1(
-                          "My Wishlist",
+                          "Manage Products",
                           customStyle: TextStyle(
                             color: Pallete.primaryDark,
                           ),
@@ -159,7 +169,33 @@ class UserProfileScreen extends StatelessWidget {
                       Divider(
                         color: Pallete.textPrimary,
                       ),
+
+                      // ListTile(
+                      //   contentPadding: const EdgeInsets.symmetric(
+                      //           horizontal: 0, vertical: 0)
+                      //       .copyWith(left: 14),
+                      //   iconColor: Pallete.primary,
+                      //   leading: const Icon(Icons.favorite_outline),
+                      //   title: body1(
+                      //     "My Wishlist",
+                      //     customStyle: TextStyle(
+                      //       color: Pallete.primaryDark,
+                      //     ),
+                      //   ),
+                      //   trailing: Icon(
+                      //     Icons.arrow_forward_ios,
+                      //     color: Pallete.textPrimary,
+                      //   ),
+                      // ),
+                      // Divider(
+                      //   color: Pallete.textPrimary,
+                      // ),
                       ListTile(
+                        onTap: () => Navigator.of(context).push(
+                          MaterialPageRoute(
+                            builder: (context) => const ChangePasswordScreen(),
+                          ),
+                        ),
                         contentPadding: const EdgeInsets.symmetric(
                                 horizontal: 0, vertical: 0)
                             .copyWith(left: 14),

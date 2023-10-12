@@ -147,10 +147,14 @@ class _EditDetailsScreenState extends State<EditDetailsScreen> {
                 ElevatedButton(
                   onPressed: () {},
                   style: ElevatedButton.styleFrom(
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(25))),
-                  child: body1('Save Changes',
-                      customStyle: const TextStyle(color: Colors.white)),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(25),
+                    ),
+                  ),
+                  child: body1(
+                    'Save Changes',
+                    customStyle: const TextStyle(color: Colors.white),
+                  ),
                 ),
               ],
             ),

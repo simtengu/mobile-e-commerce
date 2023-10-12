@@ -1,8 +1,16 @@
 import 'package:e_commerce_app/config/theme.dart';
+import 'package:e_commerce_app/core/services/injection_container.dart';
 import 'package:e_commerce_app/features/welcome/presentation/screens/get_started.dart';
+import 'package:e_commerce_app/firebase_options.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+  await init();
   runApp(const MyApp());
 }
 
