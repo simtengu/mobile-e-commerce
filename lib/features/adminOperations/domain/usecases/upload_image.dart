@@ -6,7 +6,7 @@ class UploadImage {
   final IAdminOperationsRepo _repo;
   UploadImage({required IAdminOperationsRepo repo}): _repo = repo;
 
-  Future<DataState> uploadImage({required File imageFile, required String imageName}) async {
+  Future<DataState> call({required File imageFile, required String imageName}) async {
     return await _repo.uploadProductImage(imageFile: imageFile,imageName: imageName);
   }
 

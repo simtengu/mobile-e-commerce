@@ -8,7 +8,10 @@ abstract class IAdminOperationsRepo {
   
 Future<DataState> createProduct(ProductEntity productInfo);
 Future<DataState> fetchProduct(String productId);
+Future<DataState> fetchBrands();
+Future<DataState> fetchCategories();
 Future<DataState> uploadProductImage({required File imageFile,required String imageName});
+Future<DataState> deleteProductImage({required String imageUrl});
   
   
 }

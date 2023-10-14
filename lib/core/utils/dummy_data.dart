@@ -16,11 +16,11 @@ class Product {
   });
 }
 
-
-  final List<String> shoeBrands = [
-    'Nike',
-    'Adidas',
-    'Puma',
-    'Reebok',
-    'New Balance',
-  ];
+final List<String> shoeBrands = [
+  'no brand'
+      'Nike',
+  'Adidas',
+  'Puma',
+  'Reebok',
+  'New Balance',
+];

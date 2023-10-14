@@ -6,7 +6,7 @@ class CreateProduct {
   final IAdminOperationsRepo _repo;
   CreateProduct({required IAdminOperationsRepo repo}): _repo = repo;
 
-  Future<DataState> createProduct(ProductEntity product) async {
+  Future<DataState> call(ProductEntity product) async {
     return  await _repo.createProduct(product);
   }
 

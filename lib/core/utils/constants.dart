@@ -7,5 +7,7 @@ class AppConstants {
 class FirebaseConstants {
   static String users = "users";
   static String products = "products";
+  static String brands = "brands";
+  static String categories = "categories";
   
 }

@@ -95,7 +95,7 @@ class _ImageUploadState extends State<ImageUpload> {
       isUploadingImage = true;
     });
     final DataState rs = await sl<UploadImage>()
-        .uploadImage(imageFile: imageFile, imageName: _imageOriginalName!);
+        (imageFile: imageFile, imageName: _imageOriginalName!);
     setState(() {
       isUploadingImage = false;
     });
